@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  fan-control:
+    image: fan-control:latest
+    privileged: true
+    volumes:
+      - ~/ipmi-test:/config
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

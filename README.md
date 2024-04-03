@@ -16,8 +16,6 @@ services:
   fan-control:
     image: fan-control:latest
     privileged: true
-    volumes:
-      - /path/to/your/volume:/config
     deploy:
       resources:
         reservations:

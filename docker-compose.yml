@@ -4,8 +4,6 @@ services:
   fan-control:
     image: fan-control:latest
     privileged: true
-    volumes:
-      - ~/ipmi-test:/config
     deploy:
       resources:
         reservations:

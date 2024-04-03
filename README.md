@@ -27,5 +27,8 @@ services:
 
 
 ### Build yourself
+
+If you want to modify the script, just modify the ipmi.sh then run
 ``` sudo docker build -t lenovo-ipmi-gpu-control:latest . ```
+
 ```docker run --gpus all --privileged lenovo-ipmi-gpu-control:latest```

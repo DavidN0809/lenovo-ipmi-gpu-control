@@ -17,7 +17,7 @@ services:
     image: fan-control:latest
     privileged: true
     volumes:
-      - ~/ipmi-test:/config
+      - /path/to/your/volume:/config
     deploy:
       resources:
         reservations:

@@ -26,3 +26,8 @@ services:
               count: all
               capabilities: [gpu]
 ```
+
+
+### Build yourself
+``` sudo docker build -t lenovo-ipmi-gpu-control:latest . ```
+```docker run --gpus all --privileged lenovo-ipmi-gpu-control:latest```

@@ -9,7 +9,7 @@ docker hub link
 
 docker run
 
-```docker run --gpus all --privileged lenovo-ipmi-gpu-control:latest```
+```docker run -d --name lenovo-ipmi-container --privileged --runtime=nvidia -e HOST=192.168.68.123 -e USER=USERID -e PASSWORD=PASSW0RD lenovo-ipmi-gpu-control:latest```
 
 docker compose
 ```

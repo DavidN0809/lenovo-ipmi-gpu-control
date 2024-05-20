@@ -9,7 +9,7 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    environement:
-    - HOST=192.168.68.125
-    - USER=USERID
-    - PASSWORD=PASSW0RD
+    environment:
+      HOST: 192.168.68.123
+      USER: USERID
+      PASSWORD: PASSW0RD

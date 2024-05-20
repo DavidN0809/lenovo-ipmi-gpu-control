@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # IPMI details
-HOST="192.168.68.104"
-USER="USERID"
-PASSWORD="PASSW0RD"
+HOST=${HOST}
+USER=${USER}
+PASSWORD=${PASSWORD}
 INTERVAL=1 # Interval in seconds between each full cycle of commands
 
 # Temperature thresholds

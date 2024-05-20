@@ -1,7 +1,6 @@
 # Use an NVIDIA CUDA base image
 FROM nvidia/cuda:12.3.2-base-ubuntu22.04
 
-
 # Set environment variables from build-time arguments
 ENV HOST ${HOST}
 ENV USER ${USER}
@@ -9,6 +8,9 @@ ENV PASSWORD ${PASSWORD}
 
 # Update and install ipmitool
 RUN apt-get update && apt-get install -y ipmitool
+
+# Create the /config directory
+RUN mkdir -p /config
 
 # Copy the default ipmi.sh script into the image
 COPY ipmi.sh /defaults/ipmi-default.sh

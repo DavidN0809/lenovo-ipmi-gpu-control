@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   fan-control:
-    image: fan-control:latest
+    image: lenovo-ipmi-gpu-control:latest
     privileged: true
     deploy:
       resources:
@@ -11,3 +9,7 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+    environement:
+    - HOST=192.168.68.125
+    - USER=USERID
+    - PASSWORD=PASSW0RD

@@ -5,16 +5,24 @@ right now sets to 0x50, until gpu hits 65C then uses a linear curve from 65-80C,
 built on  nvidia/cuda:12.3.2-base-ubuntu22.04
 
 docker hub link
-```https://hub.docker.com/repository/docker/blackops010/lenovo-ipmi-gpu-control/general```
+```
+https://hub.docker.com/repository/docker/blackops010/lenovo-ipmi-gpu-control/general
+```
 
 docker run
 
-```docker run -d --name lenovo-ipmi-container --privileged --runtime=nvidia -e HOST=192.168.68.123 -e USER=USERID -e PASSWORD=PASSW0RD lenovo-ipmi-gpu-control:latest```
+```
+docker run -d --name lenovo-ipmi-container --privileged --runtime=nvidia -e HOST=192.168.68.123 -e USER=USERID -e PASSWORD=PASSW0RD lenovo-ipmi-gpu-control:latest
+```
 
 
 ### Build yourself
 
 If you want to modify the script, just modify the ipmi.sh then run
-``` sudo docker build -t lenovo-ipmi-gpu-control:latest . ```
+```
+sudo docker build -t lenovo-ipmi-gpu-control:latest . 
+```
 
-```docker run --gpus all --privileged lenovo-ipmi-gpu-control:latest```
+```
+docker run --gpus all --privileged lenovo-ipmi-gpu-control:latest
+```

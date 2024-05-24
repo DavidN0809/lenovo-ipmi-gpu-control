@@ -11,23 +11,6 @@ docker run
 
 ```docker run -d --name lenovo-ipmi-container --privileged --runtime=nvidia -e HOST=192.168.68.123 -e USER=USERID -e PASSWORD=PASSW0RD lenovo-ipmi-gpu-control:latest```
 
-docker compose
-```
-version: '3.8'
-
-services:
-  fan-control:
-    image: fan-control:latest
-    privileged: true
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
-```
-
 
 ### Build yourself
 

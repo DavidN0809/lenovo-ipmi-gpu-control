@@ -20,3 +20,7 @@ sudo docker build -t lenovo-ipmi-gpu-control:latest .
 ```
 docker run --gpus all --privileged lenovo-ipmi-gpu-control:latest
 ```
+docker hub link
+```
+https://hub.docker.com/repository/docker/blackops010/lenovo-ipmi-gpu-control/general
+```
